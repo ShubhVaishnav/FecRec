@@ -3,6 +3,8 @@ A Django based Face Recognition Web App
 
 In this Web app user has to upload any image and by Face_recognition we can identify every persons from that photo and can give full details about that persons.
 
+# In branch Sherlock1 
+
 This project has only Sherlock's characters from BBC for now.
 
 Input image : 
