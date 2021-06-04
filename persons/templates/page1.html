@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		{% load static %}
+		<link rel="stylesheet"  type="text/css" href="{% static 'assets/css/main.css' %}" />
+	</head>
+
+
+	<body marginwidth="100%" marginheight="100%">
+		<br><br>
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="inner">
+					<h1>Face tells everything</h1>
+					<p>A Django Framework Based Mini Project</p>
+				</div>
+			</header>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
+{% endblock %}

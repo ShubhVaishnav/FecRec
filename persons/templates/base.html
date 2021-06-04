@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}Base page{% endblock %}
+    </title>
+
+    {% load static %}
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  />
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'persons/style.css' %}"  />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+{% block head %}
+    {% endblock %}
+
+</head>
+<body background="https://indiancybersecuritysolutions.com/wp-content/uploads/2018/11/home_office_seeks_facial_recognition_supplier_-_1-1.jpg">
+
+    <nav class="navbar navbar-inverse">
+
+        <div class="container-fluid">
+        <!--Logo and to go to the home page-->
+        <!--Header-->
+            <div class="navbar-nav">
+                <li class="active">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'persons:page1' %}"><i class="glyphicon glyphicon-home"></i> &nbsp;
+                    <font style=Satisfy>Home </font></a>
+                </li>
+            </div>
+
+        <!--Iteams-->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="">
+                    <a href="{% url 'persons:image_upload' %}">
+                        <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>&nbsp; Import
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="{% url 'persons:index' %}">
+                        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>&nbsp; Characters
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="{% url 'persons:aboutus' %}">
+                        <span class="glyphicon glyphicon-education" aria-hidden="true"></span>&nbsp; About Us
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://github.com/ageitgey/face_recognition" target="_blank"> 
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp; Technology
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+    {% block body %}
+    {% endblock %}
+
+
+
+<!--footer-->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+{% extends 'back.html' %}
+
+{% block title %} Upload Here {% endblock %}
+
+{% block body %}
+
+<!--For Preview-->
+<!--<br><br>-->
+<!--<input type="file" name="file" id="profile-img">-->
+<!--<script type="text/javascript">-->
+<!--    function readURL(input) {-->
+<!--        if (input.files && input.files[0]) {-->
+<!--            var reader = new FileReader();-->
+
+<!--            reader.onload = function (e) {-->
+<!--                $('#profile-img-tag').attr('src', e.target.result);-->
+<!--            }-->
+<!--            reader.readAsDataURL(input.files[0]);-->
+<!--        }-->
+<!--    }-->
+<!--    $("#profile-img").change(function(){-->
+<!--        readURL(this);-->
+<!--    });-->
+<!--</script>-->
+<!--<br>-->
+<!--<br>-->
+<!--<img src="" id="profile-img-tag" width="300px" />-->
+<!--<br>-->
+<!--<br>-->
+
+<style type="text/css">
+body {
+   background-image: url("https://www.radzen.com/documentation/login-background.png");
+   background-repeat: no-repeat;
+   background-position: right top;
+   background-attachment: scroll;
+    height: 500px;
+      background-size: cover;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  color: white;
+  font-size: 30px;
+  font-color: white;
+
+}
+</style>
+
+<p>
+
+    <h1>For Uploading Image</h1>
+<br><br>
+    <form method = "post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+
+        <button type="submit">Upload</button>
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+{% for character in all_characters %}
+<div class="albums-container container-fluid">
+
+
+   <div class="row"><center>
+                <div class=".col-sm-6 col-lg-3">
+                    <center>
+                    <div class="thumbnail">
+                        <a href="{% url 'persons:detail' character.id %}">
+                            <img src="{{ character.image }}" class="img-responsive" width="100%">
+                        </a><br>
+                        <div class="caption">
+                                <a href="{% url 'persons:detail' character.id %}" class="btn btn-primary btn-sm" role="button">{{ character.character_name }}</a><br>
+                        </div>
+                    </div>
+                    </center>
+                </div>
+       </center>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
